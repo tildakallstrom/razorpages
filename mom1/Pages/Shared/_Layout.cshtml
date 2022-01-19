@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Page a la Tilda</title>
+    
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="left">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">Page a la Tilda</a>
+            </div>
+            <div class="right">
+                <!--date and date to string to only show date, not time-->
+                @{
+                    var date = DateTime.Now;
+                }
+                <p>Today it is @date.ToString("yyyy/MM/dd")<br />
+                <!--Show only time, not date-->
+                Time is @date.ToString("HH:m")</p>
+            </div>
+        </div>
+    </header>
+    <div class="grids">
+        <div class="leftcontainer">
+
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/About">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Razor">Razor</a>
+                            </li>
+
+                        </ul>
+        </div>
+        <div class="rightcontainer">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+    <footer class="border-top footer text-muted" id="footer">
+        <div class="container">
+            <p> This website is created by Tilda Källström</p>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

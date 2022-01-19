@@ -1,0 +1,63 @@
+﻿@page
+@model mom1.Pages.RazorModel
+@{
+}
+@{
+
+    //todays day
+    var dateValue = DateTime.Now;
+    string dayOfWeek = dateValue.ToString("dddd");
+}
+
+<h1>Razor</h1>
+<p>Today it is @dateValue.ToString("dddd")</p>
+
+<!--if its monday, write it out, if its not, write that out-->
+@if (dayOfWeek == "Monday")
+{
+    <p>Today is monday</p>
+}
+else
+{
+    <p>It is not monday</p>
+}
+
+@{
+    var date = DateTime.Now;
+}
+<p>
+    @date
+</p>
+
+@{
+
+
+    var title = "Courses";
+    var courses = new string[]
+    {
+        "DT057G Webbutveckling I",
+        "DT084G Introduktion till programmering med JavaScript",
+        "DT163G Digital bildbehandling för webb",
+        "DT008G Typografi och form för webb",
+        "DT093G Webbutveckling II",
+        "DT003G Databaser",
+        "DT068G Webbanvändbarhet",
+        "DT152G Webbdesign för CMS",
+        "DT173G Webbutveckling III",
+        "IK060G Projektledning",
+        "DT071G Programmering i C#.NET"
+                    };
+}
+
+
+<h2>@title</h2>
+
+
+<p>Aren't you tired of reading about the courses yet?</p>
+
+<ul>
+    @foreach (var course in courses)
+    {
+        <li>@course</li>
+    }
+</ul>

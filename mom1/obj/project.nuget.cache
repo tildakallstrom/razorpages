@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "bpY+UdxgyGBzx5tBk48jkhD5U+G3pNBZ84aejwDZIeAm9UE/RNOEXeCxMs5/c4IY5ASFzt51fNP/sgMjVNCHoQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\tilda\\source\\repos\\mom1\\mom1\\mom1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\tilda\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.22\\microsoft.netcore.app.host.win-x64.3.1.22.nupkg.sha512"
+  ],
+  "logs": []
+}

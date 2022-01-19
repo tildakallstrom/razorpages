@@ -1,0 +1,22 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+@{
+
+    //todays day
+    var dateValue = DateTime.Now;
+    string dayOfWeek = dateValue.ToString("dddd");
+}
+
+<h1>Hello</h1>
+<p>Today it is @dateValue.ToString("dddd")</p>
+
+<!--if its monday, write it out, if its not, write that out-->
+@if (dayOfWeek == "Monday") { 
+<p>Today is monday</p>
+} else {
+<p>It is not monday</p>
+}
+
